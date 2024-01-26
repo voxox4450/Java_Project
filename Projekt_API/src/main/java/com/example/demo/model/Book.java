@@ -8,25 +8,25 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
-public class Recipe {
+public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is required")
-    @Size(max = 255, message = "Name cannot exceed 255 characters")
-    private String name;
+    @NotBlank(message = "Title is required")
+    @Size(max = 255, message = "Title cannot exceed 255 characters")
+    private String title;
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
